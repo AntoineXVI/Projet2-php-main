@@ -1,5 +1,4 @@
-<?php 
-require_once "../config.php"; 
+<?php require_once "../config.php"; 
 
 if (empty($_POST['email'])){
     $_SESSION['error'] = "email invalide";

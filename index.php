@@ -15,7 +15,7 @@
   <?php require "menu.php";
 
   if(isset($_SESSION['user']['admin']) && $_SESSION['user']['admin']==1){
-  echo "<h2>bienvenue </h2>";
+  echo "<h2>bienvenue , admin</h2>";
   echo "<h2><a href='admin.php' >admin</a></h2>";
   }
   ?>
@@ -65,31 +65,7 @@
         </div>
       </div>
     </div>
-    <footer class="page-footer">
-      <div class="container">
-        <div class="row">
-          <div class="col l6 s12">
-            <h2 class="white-text">Bas de Page</h2>
-            <p class="grey-text text-lighten-4">Merci d'avoir été sur cette Page.</p>
-          </div>
-          <div class="col l4 offset-l2 s12">
-            <h2 class="white-text">Liens</h2>
-            <ul>
-              <li><a class="grey-text text-lighten-3"href="index.php">Acceuil</a></li>
-              <li><a class="grey-text text-lighten-3" href="project-1.php" target="_blank">Projet 1</a></li>
-              <li><a class="grey-text text-lighten-3" href="project-2.php" target="_blank">Projet 2</a></li>
-              <li><a class="grey-text text-lighten-3" href="project-3.php" target="_blank">Projet 3</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="footer-copyright">
-        <div class="container">
-          © 2022 Copyright Text
-          <a class="grey-text text-lighten-4 right" href="https://en.wikipedia.org/wiki/Privacy_policy" target="_blank" >Privacy policy</a>
-        </div>
-      </div>
-    </footer>
+    <?php require "footer.php"; ?>
   </body>
   <!--JavaScript at end of body for optimized loading-->
   <script type="text/javascript" src="js/jquery.min.js"></script>

@@ -1,9 +1,8 @@
 <?php require_once "../config.php"; 
 
-
 //sauvegarder le fichier dans un dossier spécifique
-$destination = "../img/".$_FILES['img']['name']; //dossier "upload"
-move_uploaded_file($_FILES['img']['tmp_name'],$destination);
+$destination = "img/".$_FILES['img']['name']; //dossier "upload"
+move_uploaded_file($_FILES['img']['tmp_name'],'../'.$destination);
 
 $sql = "INSERT INTO projects(name,h1,img,text) VALUES(:name,:h1,:img,:text)";
 $dataBinded=array(

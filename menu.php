@@ -1,6 +1,5 @@
 <?php require_once "config.php"; ?>
 
-
 <!-- Dropdown Structure -->
 <ul id="dropdown1" class="dropdown-content">
       <li><a id="black">Noir</a></li>
@@ -12,9 +11,15 @@
     <a href="#!" class="brand-logo">Nos projets</a>
     <ul class="right hide-on-med-and-down">
         <li><a href="index.php"><i class="material-icons">home</i>Acceuil</a></li>
-        <li><a href="projet1.php"  >Projet 1</a></li>
-        <li><a href="projet2.php" >Projet 2</a></li>
-        <li><a href="projet3.php" >Projet 3</a></li>
+        <?php
+        $sql = "SELECT * FROM projects"; 
+        $pre = $pdo->prepare($sql); 
+        $pre->execute();
+        $data = $pre->fetchAll(PDO::FETCH_ASSOC);
+        
+        foreach($data as $projects){ ?>
+        <li><a href= "<?php echo $projects['name'].'.php' ?>" ><?php echo $projects['name'] ?></a></li>
+        <?php } ?>
         <!-- Dropdown Trigger -->
         <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Couleur<i class="material-icons right">arrow_drop_down</i></a></li>
         <?php
@@ -32,16 +37,16 @@
       <li>
         <div class="user-view">
           <div class="background">
-            <img class="sidenav-img" src="../Projet2/img/idee1.jpg">
+            <img class="sidenav-img" src="/img/idee1.jpg">
           </div>
           <a href="#name"><span class="white-text name">John Doe</span></a>
           <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>
         </div>
       </li>
       <li><a class="waves-effect" href="index.php"><i class="material-icons">home</i>Acceuil</a></li>
-      <li><a class="waves-effect" href="project-1.php" target="_blank">Projet 1</a></li>
-      <li><a class="waves-effect" href="project-2.php" target="_blank">Projet 2</a></li>
-      <li><a class="waves-effect" href="project-3.php" target="_blank">Projet 3</a></li>
+      <li><a class="waves-effect" href="project-1.php" >Projet 1</a></li>
+      <li><a class="waves-effect" href="project-2.php" >Projet 2</a></li>
+      <li><a class="waves-effect" href="project-3.php" >Projet 3</a></li>
       <!-- Dropdown Trigger -->
       <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Couleur<i class="material-icons right">arrow_drop_down</i></a></li>
     </ul>
