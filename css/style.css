@@ -1,0 +1,101 @@
+body{
+    background-color: rgb(255, 255, 255);
+}
+ 
+.nav-wrapper{
+    background-color: rgb(255, 196, 0);
+}
+ 
+.sidenav .user-view .sidenav-img{
+    display: block;
+    width: 100%;
+}
+ 
+.carousel .background1{
+    background-image: url(../img/dasri1.jpg);
+    background-size: cover;
+    background-position: center;
+ 
+}
+ 
+.carousel .background2{
+    background-image: url(../img/game-creation.jpg);
+    background-size: cover;
+    background-position: center;
+ 
+}
+ 
+.carousel .background3{
+    background-image: url(../img/rl1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+ 
+.title-index{
+    text-align: center;
+    color: rgb(255, 196, 0);
+}
+ 
+.row{
+    margin-top: 50px;
+    text-align: center;
+}
+ 
+.row .antoine{
+    display: block;
+    border: double;
+    background-color: rgb(255, 196, 0);
+    border-radius: 20px;
+}
+ 
+.row .antoine .presentation-antoine{
+    width: 50%;
+    border: 5px solid rgba(0, 0, 0, 1);
+    border-radius: 50%;
+    border: double;
+}
+ 
+.row .kyllian{
+ 
+    display: block;
+    border: double;
+    background-color: rgb(255, 196, 0);
+    border-radius: 20px;
+}
+ 
+.row .kyllian .presentation-kyllian{
+    width: 50%;
+    border: 5px solid rgba(0, 0, 0, 1);
+    border-radius: 50%;
+    border: double;
+}
+ 
+.page-footer{
+    margin-top: 10%;
+    background-color: rgb(255, 196, 0);
+}
+ 
+.title-projet{
+    text-align: center;
+    color: rgb(255, 196, 0);
+    margin-bottom: 5%;
+}
+ 
+.row .img{
+    display: block;
+    background-color: rgb(255, 196, 0);
+    border: double;
+    border-radius: 20px;
+}
+ 
+.row .img .dasri2 {
+    width: 80%;
+}
+ 
+.row .text{
+    display: block;
+    background-color: rgb(255, 196, 0);
+    border: double;
+    border-radius: 20px;
+    text-align: justify;
+}
